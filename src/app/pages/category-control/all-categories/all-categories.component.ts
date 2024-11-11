@@ -24,7 +24,8 @@ export class AllCategoriesComponent implements OnInit {
   getCategories() {
     this.categoryService.allCategories().subscribe({
       next: (res) => {
-        console.log('CATEGORY RESPONSE: ', res);
+        console.log('CATEGORY RESPONSE: ', res); 
+        this.categories = res['data']?.['categories'];
       },
       error: (error) => {
         console.log('CATEGORY ERROR: ', error);

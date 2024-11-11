@@ -1,1 +1,16 @@
-<p>all-categories works!</p>
+<button>New Category</button>
+<section class="flex flex-wrap justify-between gap-3 mx-auto w-auto">
+    <div class="w-72 border flex-none" *ngFor="let item of categories">
+        <img src="" alt="">
+        <div>
+            {{item.category_name}}
+        </div>
+        <div>
+            <button>Edit</button>
+            <button>Delete</button>
+        </div>
+    </div>
+</section>
+<section id="category-add-edit">
+
+</section>

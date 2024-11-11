@@ -1,4 +1,4 @@
-<nav class="bg-white flex px-52">
+<nav class="flex mx-auto w-auto justify-between">
   <!-- Logo -->
   <div>
     <a href="">
@@ -7,19 +7,19 @@
   </div>
 
   <!-- navigation menu -->
-  <div>
-    <ul class="flex">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="">Category</a></li>
-      <li><a routerLink="/categories">Category Control</a></li>
-      <li><a routerLink="">Orders</a></li>
-      <!--partition-->
-      <li class="mx-5 border-l-2 border-b-slate-800 h-8"></li>
-
-      <!-- cart and authentication buttons -->
-      <li><a routerLink="">Cart</a></li>
-      <li><a routerLink="">Login</a></li>
-      <li><a routerLink="">Sign up</a></li>
-    </ul>
-  </div>
+  <ul class="flex flex-initial">
+    <li class=""><a routerLink="/">Home</a></li>
+    <li class="px-6"><a routerLink="">Category</a></li>
+    <li class="px-6"><a routerLink="/categories">Category Control</a></li>
+    <li class="px-6"><a routerLink="">Orders</a></li>
+    <!--partition-->
+    <li class="" class="mx-5 border-l-2 border-b-slate-800 h-8"></li>
+    <li>
+      <i class="fi fi-tc-search"></i>
+    </li>
+    <!-- cart and authentication buttons -->
+    <li class="px-3"><a routerLink="">Cart</a></li>
+    <li class="px-3"><a routerLink="" class="">Login</a></li>
+    <li class="px-3"><a routerLink="">Sign up</a></li>
+  </ul>
 </nav>
