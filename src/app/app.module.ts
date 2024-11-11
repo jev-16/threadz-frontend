@@ -8,7 +8,8 @@ import { FooterComponent } from './pages/partials/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { AllCategoriesComponent } from './pages/category-control/all-categories/all-categories.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClient } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClient
+    HttpClientModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
