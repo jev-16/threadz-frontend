@@ -1,0 +1,68 @@
+<section>
+  <h1>Add Product</h1>
+
+  <form
+    action=""
+    #productForm="ngForm"
+    (submit)="newProduct(productForm)"
+    class="max-w-sm mx-auto"
+  >
+    <div class="mb-5">
+      <label for="prod_nme" class="">Product Name</label>
+      <input type="text" name="prod_nme" id="prod_nme" ngModel class="" />
+    </div>
+
+    <div class="mb-5">
+      <label for="prod_desc" class="">Product Description</label>
+      <input type="text" name="prod_desc" id="prod_desc" ngModel class="" />
+    </div>
+
+    <div class="mb-5">
+      <label for="prod_price" class="">Product Price</label>
+      <input type="number" name="prod_price" id="prod_price" ngModel class="" />
+    </div>
+
+    <div>
+      <label for="cat_id">Category</label>
+      <select name="cat_id" id="cat_id" ngModel>
+        <option value="{{ item.id }}" *ngFor="let item of categories">
+          {{ item.category_name }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label for="qty">Quantity</label>
+      <input type="number" name="qty" id="qty" ngModel />
+    </div>
+
+    <br />
+    <hr />
+    <br />
+    <div class="flex justify-between">
+      <div id="colorVariantContainer">
+        <h1>Color Variants</h1>
+        <button type="button" (click)="addColorVariant()">
+          Add Color Variant
+        </button>
+      </div>
+
+      <div id="sizeVariantContainer">
+        <h1>Color Variants</h1>
+        <button type="button" (click)="addSizeVariant()">
+          Add Size Variant
+        </button>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+
+    <button
+      type="submit"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >
+      Submit
+    </button>
+  </form>
+</section>

@@ -1,0 +1,36 @@
+<div class="product">
+  <div class="image-container">
+    <img
+      src="{{ baseUrl.baseUrl }}/assets/images/products/{{ image['image'] }}"
+      alt=""
+      *ngFor="let image of product?.colors!"
+      [ngClass]="{ 'active-img': image.id === currColor }"
+    />
+  </div>
+  <div class="product-info">
+    <div class="flex justify-between">
+      <h1 class="product-name">{{ product?.name }}</h1>
+      <span class="product-cost">{{ productTotalCost | currency }}</span>
+    </div>
+    <div class="colors">
+      <span
+        *ngFor="let item of product?.colors"
+        (click)="setCurrColor(item.id, item.additional_cost)"
+        [ngClass]="{ 'active-btn': item.id === currColor }"
+        style="background-color: {{item.color}};"
+        class="options-btn"
+        >{{ item.color }}</span
+      >
+    </div>
+    <hr />
+    <div class="sizes">
+      <span
+        *ngFor="let item of product?.sizes"
+        (click)="setCurrSize(item.id, item.additional_cost)"
+        [ngClass]="{ 'active-btn': item.id === currSize }"
+        class="options-btn"
+        >{{ item.size }}</span
+      >
+    </div>
+  </div>
+</div>

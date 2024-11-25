@@ -1,0 +1,41 @@
+<nav *ngIf="totalPages > 1" class="mx-auto">
+  <button
+    type="button"
+    (click)="previousPage()"
+    [disabled]="currPage <= 1"
+    class="prev"
+  >
+    <span class="material-symbols-outlined"> chevron_left </span>
+  </button>
+  <span class="page-count"> page {{ currPage }} of {{ totalPages }} </span>
+  <button
+    type="button"
+    (click)="nextPage()"
+    [disabled]="currPage === totalPages"
+    class="next"
+  >
+    <span class="material-symbols-outlined"> chevron_right </span>
+  </button>
+</nav>
+
+<!-- <nav *ngIf="totalPages > 1" class="mx-auto">
+  <button type="button" (click)="previousPage()" [disabled]="currPage <= 1" class="prev">
+    Previous
+  </button>
+  <button
+    type="button"
+    *ngFor="let page of pages"
+    (click)="onPageChange(page)"
+    [class.active]="currPage === page" 
+    
+  >
+    {{ page }}
+  </button>
+  <button
+    type="button"
+    (click)="nextPage()"
+    [disabled]="currPage === totalPages" class="next"
+  >
+    Next
+  </button>
+</nav> -->

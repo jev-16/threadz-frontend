@@ -1,16 +1,26 @@
-<button>New Category</button>
+<button type="button" (click)="openForm()">New Category</button>
 <section class="flex flex-wrap justify-between gap-3 mx-auto w-auto">
-    <div class="w-72 border flex-none" *ngFor="let item of categories">
-        <img src="" alt="">
-        <div>
-            {{item.category_name}}
-        </div>
-        <div>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
+  <div class="w-72 border flex-none" *ngFor="let item of categories">
+    <img src="" alt="" />
+    <div>
+      {{ item.category_name }}
     </div>
+    <div>
+      <button type="button" (click)="openForm(item.id, item.category_name)">Edit</button>
+      <button type="button" (click)="deleteCategory(item.id, item.category_name)">Delete</button>
+    </div>
+  </div>
 </section>
-<section id="category-add-edit">
 
+<section id="category-add-edit" *ngIf="displayForm"> 
+    <h2 class="">{{addMode ? "Add" : "Edit"}} Category</h2>
+
+  <form #categoryForm="ngForm" (ngSubmit)="submitCategory(categoryForm)">
+    <label for="category">Category Name</label>
+    <input type="text" name="category" id="category" ngModel="{{editValue}}" class="border" /> 
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <button type="button" (click)="displayForm = !displayForm">Cancel</button>
 </section>

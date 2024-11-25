@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box; 
+  margin: 0;
+}
+
+/*
+nav {
+  width: fit-content; 
+  background-color: #E5E7EB;
+}
+
+nav > button {
+  width: 2.5rem; 
+  padding: 1rem;
+  text-align: center;
+  display: inline-block; 
+  font-weight: 500;
+} 
+
+nav > button:hover {
+  background-color: #BAE6FD;
+  color: #000;
+}
+
+nav .next, nav .prev {
+    width: 5rem; 
+    background-color: #629BF8; 
+    color: #fff;
+}
+
+.active {
+    border: 2px solid #34D399;
+} */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  font-size: 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-count {
+  display: block;
+  text-align: center;
+  height: 100%;
+}
